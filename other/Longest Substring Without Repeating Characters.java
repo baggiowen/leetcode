@@ -1,4 +1,6 @@
-==================First Attempt=====================
+=======================================
+First Attempt - TIMEOUT
+=======================================
 import java.util.*;
 
 public class Solution {
@@ -36,3 +38,40 @@ public class Solution {
 //solution: use a list/hashmap to store the previous characters
 //be careful: i = i - count + 1;
 ======================================================
+second attempt - accepted
+======================================================
+import java.util.*;
+
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        boolean[] exist = new boolean[256];
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        while (j < s.length()) {
+            if (!exist[s.charAt(j)]) {
+                exist[s.charAt(j)] = true;
+                j++;
+            }
+            else {
+                count = Math.max(count, j - i);
+                while (s.charAt(i) != s.charAt(j)) {
+                    exist[s.charAt(i)] = false;
+                    i++;
+                }
+                i++;
+                j++;
+            }
+        }
+        count = Math.max(count, j - i);
+        return count;
+ 
+    }
+}
+
+//use an array to store char existence
+//requires only a one-time linear scan. O(n)
+//need two indices to record the head and the tail of the current substring
