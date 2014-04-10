@@ -75,3 +75,4 @@ public class Solution {
 //use an array to store char existence
 //requires only a one-time linear scan. O(n)
 //need two indices to record the head and the tail of the current substring
+//be careful with the last substring
