@@ -3,7 +3,7 @@ public class Solution {
         ListNode fake = new ListNode(0);
         fake.next = head;
         ListNode n1 = fake;
-        LiseNode n2 = head;
+        ListNode n2 = head;
         
         while(n2!=null && n2.next!=null){
             ListNode temp = n2.next.next;
