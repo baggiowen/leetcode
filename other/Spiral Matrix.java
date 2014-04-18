@@ -24,15 +24,19 @@ public class Solution {
                 break;
             }
             
+            //move right
             for (int i = 0; i < length - 1; i++) {
                 res.add(matrix[x][y++]);
             }
+            //move down
             for (int i = 0; i < width - 1; i++) {
                 res.add(matrix[x++][y]);
             }
+            //move left
             for (int i = 0; i < length - 1; i++) {
                 res.add(matrix[x][y--]);
             }
+            //move up
             for (int i = 0; i < width - 1; i++) {
                 res.add(matrix[x--][y]);
             }
@@ -45,5 +49,6 @@ public class Solution {
     }
 }
 
+//matrix length
 //be careful with length&width&coordination
 //don't forget to deal with the case that width=1 or length=1
