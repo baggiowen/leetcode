@@ -19,3 +19,4 @@ public class Solution {
 }
 
 //特别绕。。。calm down...step by step...
+//用实际例子来帮助解题 列出所有需要改变的结点 然后根据他们要被改变的值决定先后顺序
