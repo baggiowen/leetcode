@@ -1,0 +1,26 @@
+http://www.programcreek.com/2013/02/leetcode-binary-tree-maximum-path-sum-java/
+
+public class Solution {
+    int max = 0;
+    
+    public int maxPathSum(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        max = root.val;
+        helper(root);
+        return max;
+    }
+    
+    public int helper(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = Math.max(helper(root.left), 0);
+        int right = Math.max(helper(root.right), 0);
+        
+        max = Math.max(root.val + left + right, max);
+        
+        return root.val + Math.max(left, right);
+    }
+}
