@@ -5,6 +5,8 @@
 
 //spent too much on this one!!!
 
+//dfs: http://codeganker.blogspot.com/2014/03/permutations-ii-leetcode.html
+
 public class Solution {
     public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
