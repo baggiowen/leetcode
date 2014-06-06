@@ -20,3 +20,25 @@ public class Solution {
 
 //特别绕。。。calm down...step by step...
 //用实际例子来帮助解题 列出所有需要改变的结点 然后根据他们要被改变的值决定先后顺序
+
+//2014.6.5 update - 再写一遍已经熟练多了
+public class Solution {
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode fake = new ListNode(0);
+        fake.next = head;
+        ListNode pre = fake;
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            ListNode temp = cur.next.next;
+            cur.next.next = pre.next;
+            pre.next = cur.next;
+            cur.next = temp;
+            pre = cur;
+            cur = pre.next;
+        }
+        return fake.next;
+    }
+}
