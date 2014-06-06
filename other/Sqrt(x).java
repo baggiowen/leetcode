@@ -23,4 +23,5 @@ public class Solution {
 //switch int to long to avoid overflow
 //it's ok to compare int to long
 //don't forget to case back
+//while condition start <= end
 //last: start - 1
