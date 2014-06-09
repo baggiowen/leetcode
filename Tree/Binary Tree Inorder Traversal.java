@@ -27,23 +27,22 @@ iteratively
 ============
 
 public class Solution {
-    ArrayList<Integer> result = new ArrayList<Integer>();
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
         if (root == null) {
-            return result;
+            return res;
         }
-        LinkedList<TreeNode> nodes = new LinkedList<TreeNode>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode node = root;
-        while (nodes.size() != 0 || node != null) {
-            if (node !=  null) {
-                nodes.add(node);
+        while (node != null || stack.size() != 0) {
+            if (node != null) {
+                stack.push(node);
                 node = node.left;
             }
             else {
-                TreeNode temp = nodes.removeLast();
-                res.add(temp.val);
-                node = temp.right;
+                node = stack.pop();
+                res.add(node.val);
+                node = node.right;
             }
         }
         return res;
