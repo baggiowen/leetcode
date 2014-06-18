@@ -1,7 +1,3 @@
-=============
-first attempt
-=============
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -27,7 +23,7 @@ public class Boggle {
 		word = word + c;
 		if (word.length() >= 3) {
 			if (dict.contains(word)) {
-				res.add(new String(word));
+				res.add(word);
 			}
 		}
 		
@@ -36,7 +32,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i - 1, j - 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//top		
@@ -44,7 +39,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i - 1, j, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//top-right
@@ -52,7 +46,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i - 1, j + 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//right
@@ -60,7 +53,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i, j + 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//bottom-right
@@ -68,7 +60,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i + 1, j + 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//bottom
@@ -76,7 +67,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i + 1, j, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//bottom-left
@@ -84,7 +74,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i + 1, j - 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 		//left
@@ -92,7 +81,6 @@ public class Boggle {
 			grid[i][j] = '.';
 			helper(res, grid, i, j - 1, word, dict);
 			grid[i][j] = c;
-			word = word.substring(0, word.length());
 		}
 		
 	}
@@ -100,7 +88,7 @@ public class Boggle {
 	public static void main(String[] args) throws IOException {
 		char[][] grid = new char[][]{{'a', 's', 'i'}, {'d', 'e', 'm'}, {'o', 'n', 't'}};
 		HashSet<String> dict = new HashSet<String>();
-		BufferedReader br = new BufferedReader(new FileReader("/Users/gaohong/Documents/workspace/Sorting/scowl-7.1/final/english-words.95"));
+		BufferedReader br = new BufferedReader(new FileReader("/Users/gaohong/Documents/workspace/Sorting/scowl-7.1/final/english-words.50"));
 		String line;
 		while ((line = br.readLine()) != null) {
 			dict.add(line.trim());
