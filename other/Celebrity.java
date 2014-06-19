@@ -32,4 +32,25 @@ public static Person find(List<Person> ppl) {
 
 
 //second method: use a stack
-
+public static Person find(List<Person> ppl) {
+    Stack<Person> stack = new Stack<Person>();
+    for (Person p : ppl) {
+      stack.push(p);
+    }
+    Person p1 = stack.pop();
+    Person p2 = null;
+    while (!stack.empty()) {
+      p2 = stack.pop();
+      if (know(p1, p2)) {
+        p1 = p2;
+      }
+    }
+    for (Person p : ppl) {
+      if (p != p1) {
+        if (!know(p, p1) || know(p1, p)) {
+          return null;
+        }
+      }
+    }
+    return p1;
+}
