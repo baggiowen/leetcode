@@ -3,6 +3,7 @@ import java.util.Random;
 
 
 public class RandomN {
+	
 	public static int rand2() {
 		Random random = new Random();
 		while (true) {
@@ -13,22 +14,27 @@ public class RandomN {
 		}
 	}
 	
-	public static int rand4() {
-		while (true) {
-			int res = 3 * rand2() + rand2();
-			if (res <= 4) {
-				return res;
-			}
-		}
-	}
-	
 	public static int randN(int n) {
-		if (n == 1) {
-			return new Random().nextInt(2);
+		Random random = new Random();
+		if (n < 0) {
+			return -1;
 		}
-		int square = (int)Math.sqrt(n);
+		if (n == 0) {
+			return 0;
+		}
+		if (n == 1) {
+			return random.nextInt(2);
+		}
+
+		int pow = 0;
+		while (Math.pow(2, pow) - 1 < n) {
+			pow++;
+		}
 		while (true) {
-			int res = (square + 1) * randN(square) + randN(square);
+			int res = 0;
+			for (int i = 0; i < pow; i++) {
+				res += Math.pow(2, i) * random.nextInt(2);
+			}
 			if (res <= n) {
 				return res;
 			}
@@ -37,8 +43,8 @@ public class RandomN {
 	
 	public static void main(String[] args) {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-		for (int i = 0; i < 10000; i++) {
-			int num = randN(17);
+		for (int i = 0; i < 300000; i++) {
+			int num = randN(3);
 			//System.out.println(num);
 			if (map.containsKey(num)) {
 				map.put(num, map.get(num) + 1);
