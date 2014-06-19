@@ -17,7 +17,7 @@ public class Solution {
         int i = 0;
         while (num > 0) {
             int times = num / nums[i];
-            num -= times * nums[i];
+            num = num % nums[i];
             for (int j = 0; j < times; j++) {
                 sb.append(symbols[i]);
             }
