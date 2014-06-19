@@ -14,7 +14,7 @@ public class RandomN {
 		}
 	}
 	
-	public static int randN(int n) {
+	public static int randN(int n) throws Exception {
 		Random random = new Random();
 		if (n < 0) {
 			return -1;
@@ -31,17 +31,20 @@ public class RandomN {
 			pow++;
 		}
 		while (true) {
-			int res = 0;
+			long res = 0;
 			for (int i = 0; i < pow; i++) {
 				res += Math.pow(2, i) * random.nextInt(2);
+				if (res > Integer.MAX_VALUE) {
+					throw new Exception();
+				}
 			}
 			if (res <= n) {
-				return res;
+				return (int)res;
 			}
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int i = 0; i < 300000; i++) {
 			int num = randN(3);
