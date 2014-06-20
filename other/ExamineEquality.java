@@ -15,6 +15,7 @@ public class ExamineEquality
           s.add(a);
           s.add(b);
           flag = true;
+          break;
         }
       }
       if (!flag) {
