@@ -5,68 +5,64 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class Calculator {
-
-	/**
-	 * @param args
-	 */
-	
     public static int calculate(String str) {
     	Stack<Integer> num = new Stack<Integer>();
-    	Stack<Character> operators = new Stack<Character>();
-    	HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-    	map.put('+', 1);
-    	map.put('-', 1);
-    	map.put('*', 2);
-    	map.put('/', 2);
-    	for (int i = 0; i < str.length(); i++) {
-    		char c = str.charAt(i);
-    		if (c >= '0' && c <= '9') {
-    			num.push(c - '0');
+    	Stack<String> operators = new Stack<String>();
+    	String temp = "+-*/";
+    	HashMap<String, Integer> map = new HashMap<String, Integer>();
+    	map.put("+", 1);
+    	map.put("-", 1);
+    	map.put("*", 2);
+    	map.put("/", 2);
+    	String[] tokens = str.split(" ");
+    	for (String token : tokens) {
+    		if (!temp.contains(token)) {
+    			num.push(Integer.parseInt(token));
     		}
     		else {
-    			if (operators.isEmpty()) {
-    				operators.push(c);
+    			if (operators.empty()) {
+    				operators.push(token);
     			}
     			else {
-    				char top = operators.peek();
-    				if (map.get(c) > map.get(top)) {
-    					operators.push(c);
+    				String prev = operators.peek();
+    				if (map.get(prev) < map.get(token)) {
+    					operators.push(token);
     				}
     				else {
-    					while (!operators.isEmpty() && map.get(operators.peek()) >= map.get(c)) {
+    					while (!operators.empty() && map.get(operators.peek()) >= map.get(token)) {
     						int num1 = num.pop();
     						int num2 = num.pop();
-    						char op = operators.pop();
+    						String op = operators.pop();
     						int result = helper(num2, num1, op);
     						num.push(result);
     					}
-    					operators.push(c);
+    					operators.push(token);
     				}
     			}
     		}
     	}
-    	while (!operators.isEmpty()) {
+    	while (!operators.empty()) {
     		int num1 = num.pop();
     		int num2 = num.pop();
-    		char op = operators.pop();
-    		int result = helper(num2, num1, op);
-    		num.push(result);
+    		String op = operators.pop();
+    		num.push(helper(num2, num1, op));
     	}
     	return num.pop();
     }
     
-    public static int helper(int a, int b, char c) {
-    	switch (c) {
-    	case '+': return a + b;
-    	case '-': return a - b;
-    	case '*': return a * b;
-    	case '/': return a / b;
+    public static int helper(int a, int b, String s) {
+    	switch (s) {
+    	case "+": return a + b;
+    	case "-": return a - b;
+    	case "*": return a * b;
+    	case "/": return a / b;
     	default: return 0;
     	}
     }
 	
 	public static void main(String[] args) {
-		String str = "1-1*2*3/6+1+3+1*2*3";
+		String str = "10 - 1 * 2 * 3 / 6 + 1 + 3 + 1 * 2 * 3";
 		System.out.print(calculate(str));
 	}
 }
+
