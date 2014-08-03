@@ -3,31 +3,27 @@ public class Solution {
         if (path.length() == 0) {
             return "";
         }
-        String[] directories = path.split("/");
+        String[] directory = path.split("/");
         Stack<String> stack = new Stack<String>();
-        for (String s : directories) {
-            if (s.equals(".") || s.length() == 0) {
-                continue;
-            }
-            if (s.equals("..")) {
+        for (String str : directory) {
+            if (str.equals("..")) {
                 if (!stack.empty()) {
                     stack.pop();
                 }
             }
-            else {
-                stack.push(s);
+            else if (str.length() > 0 && !str.equals(".")) {
+                stack.push(str);
             }
         }
-        StringBuilder res = new StringBuilder();
-        res.append("/");
-        if (stack.empty()) {
-            return "/";
+        StringBuilder sb = new StringBuilder();
+        sb.append("/");
+        if (!stack.empty()) {
+            sb.append(stack.pop());
         }
         while (!stack.empty()) {
-            res.insert(1, stack.pop() + "/");
+            sb.insert(0,stack.pop()).insert(0, "/");
         }
-        String result = res.toString();
-        return result.substring(0, result.length() - 1);
+        return sb.toString();
     }
 }
 
