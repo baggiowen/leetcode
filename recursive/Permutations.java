@@ -1,3 +1,28 @@
+//iterative
+public class Solution {
+    public ArrayList<ArrayList<Integer>> permute(int[] num) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if (num.length == 0) {
+            return res;
+        }
+        res.add(new ArrayList<Integer>());
+        ArrayList<ArrayList<Integer>> cur = null;
+        for (int i = 0; i < num.length; i++) {
+            cur = new ArrayList<ArrayList<Integer>>();
+            for (ArrayList<Integer> list : res) {
+                for (int j = 0; j <= list.size(); j++) {
+                    ArrayList<Integer> temp = new ArrayList<Integer>(list);
+                    temp.add(j, num[i]);
+                    cur.add(temp);
+                }
+            }
+            res = new ArrayList<ArrayList<Integer>>(cur);
+        }
+        return res;
+    }
+}
+
+//recursive
 public class Solution {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         return getResult(num, num.length - 1);
