@@ -67,3 +67,38 @@ public class Solution {
 
 //create map<String, String>, the value is the first occurrence
 //only one iteration
+
+=============
+third attempt
+=============
+public class Solution {
+    public List<String> anagrams(String[] strs) {
+        List<String> res = new ArrayList<String>();
+        if (strs.length == 0) {
+            return res;
+        }
+        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
+        for (String str : strs) {
+            char[] array = str.toCharArray();
+            Arrays.sort(array);
+            String key = new String(array);
+            if (map.containsKey(key)) {
+                map.get(key).add(str);
+            }
+            else {
+                List<String> list = new ArrayList<String>();
+                list.add(str);
+                map.put(key, list);
+            }
+        }
+        
+        Iterator it = map.values().iterator();
+        while (it.hasNext()) {
+            List<String> list = (ArrayList<String>)it.next();
+            if (list.size() > 1) {
+                res.addAll(list);
+            }
+        }
+        return res;
+    }
+}
