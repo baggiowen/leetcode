@@ -8,3 +8,40 @@ m.next(3) = (1 + 10 + 3) / 3
 m.next(5) = (10 + 3 + 5) / 3
 
 https://leetcode.com/discuss/questions/oj/moving-average-from-data-stream
+
+public class MovingAverage {
+
+    Queue<Integer> queue;
+    int size;
+    int total;
+
+    /** Initialize your data structure here. */
+    public MovingAverage(int size) {
+        if (size <= 0) {
+            return;
+        }
+        this.size = size;
+        queue = new LinkedList<Integer>();
+        total = 0;
+    }
+    
+    public double next(int val) {
+        if (queue.size() < size) {
+            queue.add(val);
+            total += val;
+            return (double)total / (double)queue.size();
+        }
+        else {
+            int head = queue.remove();
+            total = total - head + val;
+            queue.add(val);
+            return (double)total / (double)size;
+        }
+    }
+}
+
+/**
+ * Your MovingAverage object will be instantiated and called as such:
+ * MovingAverage obj = new MovingAverage(size);
+ * double param_1 = obj.next(val);
+ */
