@@ -3,3 +3,35 @@ Given a sorted integer array where the range of elements are [lower, upper] incl
 For example, given [0, 1, 3, 50, 75], lower = 0 and upper = 99, return ["2", "4->49", "51->74", "76->99"].
 
 https://leetcode.com/discuss/questions/oj/missing-ranges
+
+public class Solution {
+    public List<String> findMissingRanges(int[] nums, int lower, int upper) {
+        List<String> ret = new ArrayList<String>();
+        if (nums.length == 0) {
+            helper(lower, upper, ret);
+            return ret;
+        }
+        int prev = lower - 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != prev + 1) {
+                helper(prev + 1, nums[i] - 1, ret);
+            }
+            prev = nums[i];
+        }
+        
+        if (nums[nums.length - 1] != upper) {
+            helper(nums[nums.length - 1] + 1, upper, ret);
+        }
+        
+        return ret;
+    }
+    
+    private void helper(int start, int end, List<String> ret) {
+        if (start == end) {
+            ret.add(start + "");
+        }
+        else {
+            ret.add(start + "->" + end);
+        }
+    }
+}
