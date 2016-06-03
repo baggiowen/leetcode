@@ -15,3 +15,35 @@ Return:
 Note: For the return value, each inner list's elements must follow the lexicographic order.
 
 https://leetcode.com/discuss/questions/oj/group-shifted-strings
+
+public class Solution {
+    public List<List<String>> groupStrings(String[] strings) {
+        List<List<String>> ret = new ArrayList<List<String>>();
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        for (String str : strings) {
+            int offset = str.charAt(0) - 'a';
+            String key = "";
+            for (int i = 0; i < str.length(); i++) {
+                char c = (char) (str.charAt(i) - offset);
+                if (c < 'a') {
+                    c += 26; //easy to miss this one
+                }
+                key += c;
+            }
+            if (!map.containsKey(key)) {
+                List<String> list = new ArrayList<String>();
+                list.add(str);
+                map.put(key, list);
+            }
+            else {
+                map.get(key).add(str);
+            }
+        }
+        
+        for (List<String> list : map.values()) {
+            Collections.sort(list);
+            ret.add(list);
+        }
+        return ret;
+    }
+}
