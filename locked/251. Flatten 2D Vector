@@ -23,3 +23,30 @@ Follow up:
 As an added challenge, try to code it using only iterators in C++ or iterators in Java.
 
 https://leetcode.com/discuss/questions/oj/flatten-2d-vector
+
+public class Vector2D implements Iterator<Integer> {
+
+    LinkedList<Iterator<Integer>> iterators = new LinkedList<Iterator<Integer>>();
+
+    public Vector2D(List<List<Integer>> vec2d) {
+        for (List<Integer> list : vec2d) {
+            iterators.add(list.iterator());
+        }
+    }
+
+    @Override
+    public Integer next() {
+        return iterators.getFirst().next();
+    }
+
+    @Override
+    public boolean hasNext() {
+        while (!iterators.isEmpty()) {
+            if (iterators.getFirst().hasNext()) {
+                return true;
+            }
+            iterators.removeFirst();
+        }
+        return false;
+    }
+}
