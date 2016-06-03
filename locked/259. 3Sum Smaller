@@ -10,3 +10,29 @@ Follow up:
 Could you solve it in O(n2) runtime?
 
 https://leetcode.com/discuss/questions/oj/3sum-smaller
+
+public class Solution {
+    public int threeSumSmaller(int[] nums, int target) {
+        if (nums.length <= 2) {
+            return 0;
+        }
+        
+        Arrays.sort(nums);
+        int ret = 0;
+        for (int i = 0; i < nums.length - 2; i++) {
+            int left = i + 1;
+            int right = nums.length - 1;
+            
+            while (left < right) {
+                if (nums[left] + nums[right] + nums[i] < target) {
+                    ret += right - left;
+                    left++;
+                }
+                else {
+                    right--;
+                }
+            }
+        }
+        return ret;
+    }
+}
