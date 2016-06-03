@@ -56,3 +56,52 @@ return its vertical order traversal as:
 ]
 
 https://leetcode.com/discuss/questions/oj/binary-tree-vertical-order-traversal
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public List<List<Integer>> verticalOrder(TreeNode root) {
+        List<List<Integer>> ret = new ArrayList<List<Integer>>();
+        if (root == null) {
+            return ret;
+        }
+        
+        Queue<Integer> cols = new LinkedList<Integer>();
+        Queue<TreeNode> nodes = new LinkedList<TreeNode>();
+        Map<Integer, List<Integer>> map = new TreeMap<Integer, List<Integer>>();
+        cols.add(0);
+        nodes.add(root);
+        while(!nodes.isEmpty()) {
+            TreeNode node = nodes.remove();
+            int col = cols.remove();
+            if (map.containsKey(col)) {
+                map.get(col).add(node.val);
+            }
+            else {
+                List<Integer> list = new ArrayList<Integer>();
+                list.add(node.val);
+                map.put(col, list);
+            }
+            if (node.left != null) {
+                nodes.add(node.left);
+                cols.add(col - 1);
+            }
+            if (node.right != null) {
+                nodes.add(node.right);
+                cols.add(col + 1);
+            }
+        }
+        
+        for (List<Integer> list : map.values()) {
+            ret.add(list);
+        }
+        return ret;
+    }
+}
