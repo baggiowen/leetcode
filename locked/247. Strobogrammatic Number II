@@ -10,3 +10,33 @@ Hint:
 Try to use recursion and notice that it should recurse with n - 2 instead of n - 1.
 
 https://leetcode.com/discuss/questions/oj/strobogrammatic-number-ii
+
+public class Solution {
+    public List<String> findStrobogrammatic(int n) {
+        return helper(n, n);
+    }
+    
+    private List<String> helper(int n, int m) {
+        List<String> ret = new ArrayList<String>();
+        if (n == 0) {
+            ret.addAll(Arrays.asList(""));
+            return ret;
+        }
+        if (n == 1) {
+            ret.addAll(Arrays.asList("0", "1", "8"));
+            return ret;
+        }
+        
+        List<String> prev = helper(n - 2, m);
+        for (String s : prev) {
+            if (n != m) {
+                ret.add("0" + s + "0");
+            }
+            ret.add("1" + s + "1");
+            ret.add("8" + s + "8");
+            ret.add("6" + s + "9");
+            ret.add("9" + s + "6");
+        }
+        return ret;
+    }
+}
