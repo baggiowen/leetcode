@@ -5,3 +5,32 @@ For example, Given s = “eceba” and k = 2,
 T is "ece" which its length is 3.
 
 https://leetcode.com/discuss/questions/oj/longest-substring-with-at-most-k-distinct-characters
+
+public class Solution {
+    public int lengthOfLongestSubstringKDistinct(String s, int k) {
+        if (s == null || s.length() == 0 || k == 0) {
+            return 0;
+        }
+        int ret = 0;
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        int left = 0;
+        int right = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            if (map.size() >= k && !map.containsKey(c)) {
+                ret = Math.max(ret, right - left);
+                int leftmost = s.length() - 1;
+                for (int i : map.values()) {
+                    leftmost = Math.min(leftmost, i);
+                }
+                map.remove(s.charAt(leftmost));
+                left = leftmost + 1;
+            }
+            map.put(c, right);
+            right++;
+        }
+        
+        ret = Math.max(ret, right - left);
+        return ret;
+    }
+}
