@@ -5,3 +5,30 @@ Given target value is a floating point.
 You are guaranteed to have only one unique value in the BST that is closest to the target.
 
 https://leetcode.com/discuss/questions/oj/closest-binary-search-tree-value
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int closestValue(TreeNode root, double target) {
+        int ret = root.val;
+        while (root != null) {
+            if (Math.abs(root.val - target) < Math.abs(ret - target)) {
+                ret = root.val;
+            }
+            if (root.val < target) {
+                root = root.right;
+            }
+            else {
+                root = root.left;
+            }
+        }
+        return ret;
+    }
+}
