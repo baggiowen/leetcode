@@ -17,3 +17,33 @@ You can assume that no duplicate edges will appear in edges. Since all edges are
 
 
 https://leetcode.com/discuss/questions/oj/number-of-connected-components-in-an-undirected-graph
+
+public class Solution {
+    public int countComponents(int n, int[][] edges) {
+        int[] roots = new int[n];
+        for (int i = 0; i < n; i++) {
+            roots[i] = i;
+        }
+        
+        for (int[] pos : edges) {
+            int n1 = pos[0];
+            int n2 = pos[1];
+            int root1 = findRoot(roots, n1);
+            int root2 = findRoot(roots, n2);
+            if (root1 != root2) {
+                roots[root1] = root2;
+                n--;
+            }
+        }
+        
+        return n;
+    }
+    
+    private int findRoot(int[] roots, int num) {
+        while (roots[num] != num) {
+            roots[num] = roots[roots[num]]; // i don't understand
+            num = roots[num];
+        }
+        return num;
+    }
+}
