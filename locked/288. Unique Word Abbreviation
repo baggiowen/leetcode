@@ -23,3 +23,44 @@ isUnique("cane") -> false
 isUnique("make") -> true
 
 https://leetcode.com/discuss/questions/oj/unique-word-abbreviation
+
+public class ValidWordAbbr {
+    
+    Map<String, String> abbrMap = new HashMap<String, String>();
+
+    public ValidWordAbbr(String[] dictionary) {
+        for(String str : dictionary) {
+            String abbr = toAbbr(str);
+            if (!abbrMap.containsKey(abbr)) {
+                abbrMap.put(abbr, str);
+            }
+            else {
+                if (!abbrMap.get(abbr).equals(str)) {
+                    abbrMap.put(abbr, "");
+                }
+            }
+        }
+    }
+
+    public boolean isUnique(String word) {
+        return !abbrMap.containsKey(toAbbr(word)) || abbrMap.get(toAbbr(word)).equals(word);
+    }
+    
+    private String toAbbr(String str) {
+        if (str.length() <= 2) {
+            return str;
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append(str.charAt(0));
+        sb.append(str.length() - 2);
+        sb.append(str.charAt(str.length() - 1));
+        return sb.toString();
+    }
+}
+
+
+// Your ValidWordAbbr object will be instantiated and called as such:
+// ValidWordAbbr vwa = new ValidWordAbbr(dictionary);
+// vwa.isUnique("Word");
+// vwa.isUnique("anotherWord");
