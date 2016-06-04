@@ -35,3 +35,70 @@ Challenge:
 Can you do it in time complexity O(k log mn), where k is the length of the positions?
 
 https://leetcode.com/discuss/questions/oj/number-of-islands-ii
+
+public class Solution {
+    public List<Integer> numIslands2(int m, int n, int[][] positions) {
+        List<Integer> ret = new ArrayList<Integer>();
+        if (m <= 0 || n <= 0) {
+            return ret;
+        }
+        
+        int[] roots = new int[m * n];
+        for (int i = 0; i < roots.length; i++) {
+            roots[i] = -1;
+        }
+        
+        int count = 0;
+        for (int[] pos : positions) {
+            int i = pos[0];
+            int j = pos[1];
+            int index = i * n + j;
+            roots[index] = index;
+            count++;
+            
+            if (i - 1 >= 0 && roots[(i-1)*n+j] != -1) {
+                int rootNeighbor = findRoot(roots, (i-1)*n+j);
+                if (rootNeighbor != index) {
+                    roots[index] = rootNeighbor;
+                    index = rootNeighbor;
+                    count--;
+                }
+            }
+            if (j - 1 >= 0 && roots[i*n+j-1] != -1) {
+                int rootNeighbor = findRoot(roots, i*n+j-1);
+                if (rootNeighbor != index) {
+                    roots[index] = rootNeighbor;
+                    index = rootNeighbor;
+                    count--;
+                }
+            }
+            if (i + 1 < m && roots[(i+1)*n+j] != -1) {
+                int rootNeighbor = findRoot(roots, (i+1)*n+j);
+                if (rootNeighbor != index) {
+                    roots[index] = rootNeighbor;
+                    index = rootNeighbor;
+                    count--;
+                }
+            }
+            if (j + 1 < n && roots[i*n+j+1] != -1) {
+                int rootNeighbor = findRoot(roots, i*n+j+1);
+                if (rootNeighbor != index) {
+                    roots[index] = rootNeighbor;
+                    index = rootNeighbor;
+                    count--;
+                }
+            }
+            
+            ret.add(count);
+        }
+        
+        return ret;
+    }
+    
+    private int findRoot(int[] roots, int index) {
+        while(roots[index] != index) {
+            index = roots[index];
+        }
+        return index;
+    }
+}
