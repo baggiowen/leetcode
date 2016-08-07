@@ -7,30 +7,30 @@
 262	Trips and Users	16.2%	Hard	
 17	Letter Combinations of a Phone Number	29.1%	Medium	
 13	Roman to Integer	39.9%	Easy	
-10	Regular Expression Matching 	22.2%	Hard	
+[10]	Regular Expression Matching 	22.2%	Hard	
 290	Word Pattern	29.6%	Easy	
 39	Combination Sum	31.3%	Medium	
-254	Factor Combinations 	35.1%	Medium	
+[254]	Factor Combinations 	35.1%	Medium	
 186	Reverse Words in a String II 	29.0%	Medium	
 24	Swap Nodes in Pairs	35.5%	Easy	
 22	Generate Parentheses	37.5%	Medium	
 1	Two Sum	23.9%	Easy	
-291	Word Pattern II 	35.2%	Hard	
+[291]	Word Pattern II 	35.2%	Hard	
 249	Group Shifted Strings 	31.7%	Easy	
 242	Valid Anagram	42.3%	Easy	
-230	Kth Smallest Element in a BST	38.2%	Medium	
+[230]	Kth Smallest Element in a BST	38.2%	Medium	
 208	Implement Trie (Prefix Tree)	25.4%	Medium	
 206	Reverse Linked List	40.0%	Easy	
 202	Happy Number	36.9%	Easy	
 133	Clone Graph	24.9%	Medium	
 91	Decode Ways	17.7%	Medium	
-76	Minimum Window Substring	21.5%	Hard	
+[76]	Minimum Window Substring	21.5%	Hard	
 37	Sudoku Solver 	25.3%	Hard	
 138	Copy List with Random Pointer	26.1%	Hard	
 23	Merge k Sorted Lists	23.7%	Hard	
-337	House Robber III	37.5%	Medium	
-161	One Edit Distance 	28.6%	Medium	
-140	Word Break II	20.1%	Hard	
+[337]	House Robber III	37.5%	Medium	
+[161]	One Edit Distance 	28.6%	Medium	
+[140]	Word Break II	20.1%	Hard	
 125	Valid Palindrome	24.0%	Easy	
 104	Maximum Depth of Binary Tree	48.2%	Easy	
 33	Search in Rotated Sorted Array	30.5%	Hard	
@@ -39,4 +39,4 @@
 155	Min Stack	22.7%	Easy	
 121	Best Time to Buy and Sell Stock	36.3%	Easy	
 78	Subsets	31.8%	Medium	
-8	String to Integer (atoi)	13.5%	Easy
+[8]	String to Integer (atoi)	13.5%	Easy
