@@ -31,17 +31,17 @@
 218	The Skyline Problem	22.7%	Hard	
 211	Add and Search Word - Data structure design	20.2%	Medium	
 [173]	Binary Search Tree Iterator	35.0%	Medium	
-161	One Edit Distance 	28.6%	Medium	
-157	Read N Characters Given Read4 	29.4%	Easy	
+161*	One Edit Distance 	28.6%	Medium	
+157*	Read N Characters Given Read4 	29.4%	Easy	
 [79]	Word Search	23.2%	Medium	
 [57]	Insert Interval	24.1%	Hard	
-277	Find the Celebrity 	34.9%	Medium	
+277*	Find the Celebrity 	34.9%	Medium	
 [238]	Product of Array Except Self	43.3%	Medium	
 [209]	Minimum Size Subarray Sum	27.2%	Medium	
 [127]	Word Ladder	19.7%	Medium	
 [28]	Implement strStr()	25.2%	Easy	
-285	Inorder Successor in BST 	35.7%	Medium	
-158	Read N Characters Given Read4 II - Call multiple times 	23.5%	Hard	
+285*	Inorder Successor in BST 	35.7%	Medium	
+158*	Read N Characters Given Read4 II - Call multiple times 	23.5%	Hard	
 [128]	Longest Consecutive Sequence	32.5%	Hard	
 [121]	Best Time to Buy and Sell Stock	36.3%	Easy	
 [90]	Subsets II	30.9%	Medium	
@@ -50,7 +50,7 @@
 [20]	Valid Parentheses	29.7%	Easy	
 [13]	Roman to Integer	39.9%	Easy	
 [325]	Maximum Size Subarray Sum Equals k 	39.9%	Easy	
-253	Meeting Rooms II 	35.0%	Medium	
+253*	Meeting Rooms II 	35.0%	Medium	
 [88]	Merge Sorted Array	30.2%	Easy	
 [33]	Search in Rotated Sorted Array	30.5%	Hard	
 [297]	Serialize and Deserialize Binary Tree	28.1%	Hard	
@@ -71,8 +71,8 @@
 117	Populating Next Right Pointers in Each Node II	32.9%	Hard	
 25	Reverse Nodes in k-Group	27.8%	Hard	
 [286]	Walls and Gates 	37.9%	Medium	
-269	Alien Dictionary 	23.3%	Hard	
-265	Paint House II 	35.7%	Hard	
+269*	Alien Dictionary 	23.3%	Hard	
+265*	Paint House II 	35.7%	Hard	
 [261]	Graph Valid Tree 	33.0%	Medium	
 [168]	Excel Sheet Column Title	22.1%	Easy	
 [80]	Remove Duplicates from Sorted Array II	33.0%	Medium	
