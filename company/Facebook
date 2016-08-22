@@ -59,7 +59,7 @@
 [69]	Sqrt(x)	25.5%	Medium	
 [50]	Pow(x, n)	27.9%	Medium	
 [252]	Meeting Rooms 	42.0%	Easy	
-334	Increasing Triplet Subsequence	34.1%	Medium	
+[334]	Increasing Triplet Subsequence	34.1%	Medium	
 [235]	Lowest Common Ancestor of a Binary Search Tree	37.6%	Easy	
 274	H-Index	29.8%	Medium	
 [234]	Palindrome Linked List	28.6%	Easy	
