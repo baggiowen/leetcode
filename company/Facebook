@@ -18,7 +18,7 @@
 [38]	Count and Say	29.4%	Easy	
 [273]	Integer to English Words	19.0%	Hard	
 [125]	Valid Palindrome	24.0%	Easy	
-311	Sparse Matrix Multiplication 	47.3%	Medium	
+311*	Sparse Matrix Multiplication 	47.3%	Medium	
 [43]	Multiply Strings	23.8%	Medium	
 [314]	Binary Tree Vertical Order Traversal 	31.1%	Medium	
 301	Remove Invalid Parentheses	32.3%	Hard	
