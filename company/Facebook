@@ -21,7 +21,7 @@
 311*	Sparse Matrix Multiplication 	47.3%	Medium	
 [43]	Multiply Strings	23.8%	Medium	
 [314]	Binary Tree Vertical Order Traversal 	31.1%	Medium	
-301	Remove Invalid Parentheses	32.3%	Hard	
+[301]	Remove Invalid Parentheses	32.3%	Hard	
 [200]	Number of Islands	28.1%	Medium	
 [146]	LRU Cache	15.8%	Hard	
 [98]	Validate Binary Search Tree	21.1%	Medium	
