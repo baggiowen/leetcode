@@ -59,21 +59,21 @@
 332	Reconstruct Itinerary	26.3%	Medium	
 ^159	Longest Substring with At Most Two Distinct Characters 	36.8%	Hard	
 ^240	Search a 2D Matrix II	36.2%	Medium	
-270	Closest Binary Search Tree Value 	35.8%	Easy	
+^270	Closest Binary Search Tree Value 	35.8%	Easy	
 247	Strobogrammatic Number II 	35.9%	Medium	
 276	Paint Fence 	32.4%	Easy	
 324	Wiggle Sort II	23.9%	Medium	
-341	Flatten Nested List Iterator	33.9%	Medium	
+^341	Flatten Nested List Iterator	33.9%	Medium	
 361	Bomb Enemy 	35.8%	Medium	
 294	Flip Game II 	42.7%	Medium	
 214	Shortest Palindrome	21.1%	Hard	
-208	Implement Trie (Prefix Tree)	25.5%	Medium	
+^208	Implement Trie (Prefix Tree)	25.5%	Medium	
 158	Read N Characters Given Read4 II - Call multiple times 	24.0%	Hard	
 373	Find K Pairs with Smallest Sums	27.2%	Medium	
 327	Count of Range Sum	27.3%	Hard	
 282	Expression Add Operators	26.5%	Hard	
 362	Design Hit Counter 	49.8%	Medium	
-293	Flip Game 	51.4%	Easy	
+^293	Flip Game 	51.4%	Easy	
 388	Longest Absolute File Path	21.8%	Medium	
 336	Palindrome Pairs	22.1%	Hard	
 249	Group Shifted Strings 	34.4%	Easy	
@@ -82,13 +82,13 @@
 368	Largest Divisible Subset	31.4%	Medium	
 272	Closest Binary Search Tree Value II 	35.4%	Hard
 331	Verify Preorder Serialization of a Binary Tree	33.3%	Medium	
-257	Binary Tree Paths	31.3%	Easy	
+^257	Binary Tree Paths	31.3%	Easy	
 360	Sort Transformed Array 	40.9%	Medium	
 251	Flatten 2D Vector 	35.8%	Medium	
 302	Smallest Rectangle Enclosing Black Pixels 	41.3%	Hard	
 369	Plus One Linked List 	49.8%	Medium	
 326	Power of Three	38.2%	Easy	
-374	Guess Number Higher or Lower	31.4%	Easy	
+^374	Guess Number Higher or Lower	31.4%	Easy	
 357	Count Numbers with Unique Digits	43.5%	Medium	
 358	Rearrange String k Distance Apart 	29.3%	Hard	
 359	Logger Rate Limiter 	56.8%	Easy	
@@ -100,7 +100,7 @@
 354	Russian Doll Envelopes	30.0%	Hard	
 313	Super Ugly Number	36.0%	Medium	
 375	Guess Number Higher or Lower II	30.7%	Medium	
-323	Number of Connected Components in an Undirected Graph 	44.2%	Medium	
+^323	Number of Connected Components in an Undirected Graph 	44.2%	Medium	
 363	Max Sum of Rectangle No Larger Than K	29.9%	Hard	
 370	Range Addition 	50.4%	Medium	
 310	Minimum Height Trees	27.7%	Medium	
@@ -109,8 +109,8 @@
 377	Combination Sum IV	39.5%	Medium	
 321	Create Maximum Number	22.6%	Hard	
 378	Kth Smallest Element in a Sorted Matrix	41.0%	Medium	
-261	Graph Valid Tree 	34.3%	Medium	
+^261	Graph Valid Tree 	34.3%	Medium	
 379	Design Phone Directory 	25.9%	Medium	
-314	Binary Tree Vertical Order Traversal 	32.7%	Medium	
-380	Insert Delete GetRandom O(1)	35.0%	Hard	
+^314	Binary Tree Vertical Order Traversal 	32.7%	Medium	
+^380	Insert Delete GetRandom O(1)	35.0%	Hard	
 312	Burst Balloons
