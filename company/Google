@@ -77,14 +77,14 @@
 388	Longest Absolute File Path	21.8%	Medium	
 336	Palindrome Pairs	22.1%	Hard	
 ^249	Group Shifted Strings 	34.4%	Easy	
-351	Android Unlock Patterns 	38.5%	Medium	
-348	Design Tic-Tac-Toe 	44.0%	Medium	
+*351	Android Unlock Patterns 	38.5%	Medium	
+*348	Design Tic-Tac-Toe 	44.0%	Medium	
 368	Largest Divisible Subset	31.4%	Medium	
 272	Closest Binary Search Tree Value II 	35.4%	Hard
 331	Verify Preorder Serialization of a Binary Tree	33.3%	Medium	
 ^257	Binary Tree Paths	31.3%	Easy	
-360	Sort Transformed Array 	40.9%	Medium	
-251	Flatten 2D Vector 	35.8%	Medium	
+*360	Sort Transformed Array 	40.9%	Medium	
+*251	Flatten 2D Vector 	35.8%	Medium	
 302	Smallest Rectangle Enclosing Black Pixels 	41.3%	Hard	
 369	Plus One Linked List 	49.8%	Medium	
 326	Power of Three	38.2%	Easy	
