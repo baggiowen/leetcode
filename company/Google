@@ -69,7 +69,7 @@
 214	Shortest Palindrome	21.1%	Hard	
 ^208	Implement Trie (Prefix Tree)	25.5%	Medium	
 *158	Read N Characters Given Read4 II - Call multiple times 	24.0%	Hard	
-373	Find K Pairs with Smallest Sums	27.2%	Medium	
+^373	Find K Pairs with Smallest Sums	27.2%	Medium	
 327	Count of Range Sum	27.3%	Hard	
 282	Expression Add Operators	26.5%	Hard	
 *362	Design Hit Counter 	49.8%	Medium	
@@ -108,7 +108,7 @@
 356	Line Reflection 	28.5%	Medium	
 377	Combination Sum IV	39.5%	Medium	
 321	Create Maximum Number	22.6%	Hard	
-378	Kth Smallest Element in a Sorted Matrix	41.0%	Medium	
+^378	Kth Smallest Element in a Sorted Matrix	41.0%	Medium	
 ^261	Graph Valid Tree 	34.3%	Medium	
 379	Design Phone Directory 	25.9%	Medium	
 ^314	Binary Tree Vertical Order Traversal 	32.7%	Medium	
