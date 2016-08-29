@@ -5,7 +5,7 @@
 ^163	Missing Ranges 	30.3%	Medium	
 ^228	Summary Ranges	25.9%	Medium	
 ^56	Merge Intervals	26.6%	Hard	
-279	Perfect Squares	34.1%	Medium	
+^279	Perfect Squares	34.1%	Medium	
 *308	Range Sum Query 2D - Mutable 	20.9%	Hard	
 *298	Binary Tree Longest Consecutive Sequence 	38.1%	Medium	
 ^297	Serialize and Deserialize Binary Tree	29.4%	Hard	
@@ -32,7 +32,7 @@
 ^133	Clone Graph	24.9%	Medium	
 ^230	Kth Smallest Element in a BST	39.8%	Medium	
 ^271	Encode and Decode Strings 	27.3%	Medium	
-274	H-Index	30.7%	Medium	
+^274	H-Index	30.7%	Medium	
 ^231	Power of Two	38.2%	Easy	
 ^54	Spiral Matrix	23.5%	Medium	
 ^239	Sliding Window Maximum	29.1%	Hard	
@@ -46,7 +46,7 @@
 ^57	Insert Interval	24.9%	Hard	
 *317	Shortest Distance from All Buildings 	32.2%	Hard	
 ^173	Binary Search Tree Iterator	36.5%	Medium	
-318	Maximum Product of Word Lengths	40.9%	Medium	
+^318	Maximum Product of Word Lengths	40.9%	Medium	
 ^246	Strobogrammatic Number 	37.6%	Easy	
 ^22	Generate Parentheses	39.1%	Medium	
 *253	Meeting Rooms II 	36.3%	Medium	
@@ -80,14 +80,14 @@
 *351	Android Unlock Patterns 	38.5%	Medium	
 *348	Design Tic-Tac-Toe 	44.0%	Medium	
 ^368	Largest Divisible Subset	31.4%	Medium	
-272	Closest Binary Search Tree Value II 	35.4%	Hard
+*272	Closest Binary Search Tree Value II 	35.4%	Hard
 ^331	Verify Preorder Serialization of a Binary Tree	33.3%	Medium	
 ^257	Binary Tree Paths	31.3%	Easy	
 *360	Sort Transformed Array 	40.9%	Medium	
 *251	Flatten 2D Vector 	35.8%	Medium	
-302	Smallest Rectangle Enclosing Black Pixels 	41.3%	Hard	
+*302	Smallest Rectangle Enclosing Black Pixels 	41.3%	Hard	
 *369	Plus One Linked List 	49.8%	Medium	
-326	Power of Three	38.2%	Easy	
+^326	Power of Three	38.2%	Easy	
 ^374	Guess Number Higher or Lower	31.4%	Easy	
 357	Count Numbers with Unique Digits	43.5%	Medium	
 ^358	Rearrange String k Distance Apart 	29.3%	Hard	
