@@ -93,7 +93,7 @@
 ^358	Rearrange String k Distance Apart 	29.3%	Hard	
 *359	Logger Rate Limiter 	56.8%	Easy	
 ^266	Palindrome Permutation 	52.7%	Easy	
-382	Linked List Random Node	46.3%	Medium	
+^382	Linked List Random Node	46.3%	Medium	
 *353	Design Snake Game 	23.9%	Medium	
 316	Remove Duplicate Letters	26.9%	Hard	
 309	Best Time to Buy and Sell Stock with Cooldown	38.4%	Medium	
@@ -114,3 +114,4 @@
 ^314	Binary Tree Vertical Order Traversal 	32.7%	Medium	
 ^380	Insert Delete GetRandom O(1)	35.0%	Hard	
 312	Burst Balloons
+372 Super Pow
