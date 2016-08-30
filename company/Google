@@ -71,7 +71,7 @@
 *158	Read N Characters Given Read4 II - Call multiple times 	24.0%	Hard	
 ^373	Find K Pairs with Smallest Sums	27.2%	Medium	
 327	Count of Range Sum	27.3%	Hard	
-282	Expression Add Operators	26.5%	Hard	
+^282	Expression Add Operators	26.5%	Hard	
 *362	Design Hit Counter 	49.8%	Medium	
 ^293	Flip Game 	51.4%	Easy	
 ^388	Longest Absolute File Path	21.8%	Medium	
@@ -89,7 +89,7 @@
 *369	Plus One Linked List 	49.8%	Medium	
 ^326	Power of Three	38.2%	Easy	
 ^374	Guess Number Higher or Lower	31.4%	Easy	
-357	Count Numbers with Unique Digits	43.5%	Medium	
+^357	Count Numbers with Unique Digits	43.5%	Medium	
 ^358	Rearrange String k Distance Apart 	29.3%	Hard	
 *359	Logger Rate Limiter 	56.8%	Easy	
 ^266	Palindrome Permutation 	52.7%	Easy	
