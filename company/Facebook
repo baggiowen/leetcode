@@ -26,7 +26,7 @@
 [146]	LRU Cache	15.8%	Hard	
 [98]	Validate Binary Search Tree	21.1%	Medium	
 44	Wildcard Matching	17.6%	Hard	
-282	Expression Add Operators	25.3%	Hard	
+[282]	Expression Add Operators	25.3%	Hard	
 [236]	Lowest Common Ancestor of a Binary Tree	28.8%	Medium	
 218	The Skyline Problem	22.7%	Hard	
 [211]	Add and Search Word - Data structure design	20.2%	Medium	
