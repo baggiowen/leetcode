@@ -106,7 +106,7 @@
 310	Minimum Height Trees	27.7%	Medium	
 330	Patching Array	30.4%	Hard	
 *356	Line Reflection 	28.5%	Medium	
-377	Combination Sum IV	39.5%	Medium	
+^377	Combination Sum IV	39.5%	Medium	
 ^321	Create Maximum Number	22.6%	Hard	
 ^378	Kth Smallest Element in a Sorted Matrix	41.0%	Medium	
 ^261	Graph Valid Tree 	34.3%	Medium	
