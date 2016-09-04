@@ -104,7 +104,7 @@
 363	Max Sum of Rectangle No Larger Than K	29.9%	Hard	
 *370	Range Addition 	50.4%	Medium	
 310	Minimum Height Trees	27.7%	Medium	
-330	Patching Array	30.4%	Hard	
+^330	Patching Array	30.4%	Hard	
 *356	Line Reflection 	28.5%	Medium	
 ^377	Combination Sum IV	39.5%	Medium	
 ^321	Create Maximum Number	22.6%	Hard	
