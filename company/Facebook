@@ -61,11 +61,11 @@
 [252]	Meeting Rooms 	42.0%	Easy	
 [334]	Increasing Triplet Subsequence	34.1%	Medium	
 [235]	Lowest Common Ancestor of a Binary Search Tree	37.6%	Easy	
-274	H-Index	29.8%	Medium	
+[274]	H-Index	29.8%	Medium	
 [234]	Palindrome Linked List	28.6%	Easy	
 [102]	Binary Tree Level Order Traversal	33.1%	Easy	
 85	Maximal Rectangle	23.7%	Hard	
-275	H-Index II	32.7%	Medium	
+[275]	H-Index II	32.7%	Medium	
 [221]	Maximal Square	23.9%	Medium	
 [210]	Course Schedule II	21.0%	Medium	
 [117]	Populating Next Right Pointers in Each Node II	32.9%	Hard	
