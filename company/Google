@@ -99,7 +99,7 @@
 309	Best Time to Buy and Sell Stock with Cooldown	38.4%	Medium	
 ^354	Russian Doll Envelopes	30.0%	Hard	
 ^313	Super Ugly Number	36.0%	Medium	
-375	Guess Number Higher or Lower II	30.7%	Medium	
+^375	Guess Number Higher or Lower II	30.7%	Medium	
 ^323	Number of Connected Components in an Undirected Graph 	44.2%	Medium	
 363	Max Sum of Rectangle No Larger Than K	29.9%	Hard	
 *370	Range Addition 	50.4%	Medium	
