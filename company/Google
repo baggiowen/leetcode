@@ -75,7 +75,7 @@
 *362	Design Hit Counter 	49.8%	Medium	
 ^293	Flip Game 	51.4%	Easy	
 ^388	Longest Absolute File Path	21.8%	Medium	
-336	Palindrome Pairs	22.1%	Hard	
+^336	Palindrome Pairs	22.1%	Hard	
 ^249	Group Shifted Strings 	34.4%	Easy	
 *351	Android Unlock Patterns 	38.5%	Medium	
 *348	Design Tic-Tac-Toe 	44.0%	Medium	
